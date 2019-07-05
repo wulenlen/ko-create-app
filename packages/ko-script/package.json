@@ -1,6 +1,6 @@
 {
   "name": "ko-script",
-  "version": "3.3.0",
+  "version": "3.3.2",
   "description": "this is cli",
   "main": "index.js",
   "scripts": {
@@ -67,7 +67,7 @@
     "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^3.2.0",
     "inquirer": "^6.4.0",
-    "ko-babel-app": "^7.4.11",
+    "ko-babel-app": "^7.4.12",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "lodash": "^4.17.11",
