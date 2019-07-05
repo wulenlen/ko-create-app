@@ -105,6 +105,7 @@ module.exports = (context) => {
 ```
 
 ### Tips
+> v3版本以上仅支持babel-loader8
 > react支持ts，并且ts，tsx和js，jsx可以共存，但是如果使用es6新语法，诸如 await，箭头函数，const等，需要将文件改为ts或者tsx
 
 > 文件路径别名问题，如果使用tsx，webpack中别名配置将会报错，需要在tsconfig中配置path别名
