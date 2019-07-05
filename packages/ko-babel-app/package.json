@@ -1,6 +1,6 @@
 {
   "name": "ko-babel-app",
-  "version": "7.4.4",
+  "version": "7.4.6",
   "description": "this is babel",
   "main": "index.js",
   "scripts": {
@@ -53,6 +53,5 @@
     "@babel/runtime": "^7.4.5",
     "@types/node": "^12.0.8",
     "babel-plugin-import": "^1.12.0"
-  },
-  "devDependencies": {}
+  }
 }
