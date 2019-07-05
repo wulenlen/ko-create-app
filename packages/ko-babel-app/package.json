@@ -1,6 +1,6 @@
 {
   "name": "ko-babel-app",
-  "version": "7.4.0",
+  "version": "7.4.4",
   "description": "this is babel",
   "main": "index.js",
   "scripts": {
