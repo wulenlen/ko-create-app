@@ -33,4 +33,4 @@
 15 error [1/4] Resolving packages...
 15 error info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
 15 error
-15 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/lerna/node_modules/execa/index.js:236:11
+15 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/execa/index.js:236:11
