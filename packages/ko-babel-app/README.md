@@ -5,7 +5,7 @@
 [![node version](https://github.githubassets.com/images/icons/emoji/unicode/1f420.png)](https://www.npmjs.com/package/babel-loader)
 
 ```text
-这个包是所有babel预设的集合，支持babel-loader 8版本以上
+babel预设集合，支持react,typescript,antd动态引入
 ```
 ## Installation
 ```text
@@ -29,6 +29,7 @@ $ yarn add  ko-babel-app --dev.
 
 ## Tips
 > 1.可配合 ko-script 使用;
+
 > 2.可单独配置webpack中使用，省去安装各种babel;
 
 
