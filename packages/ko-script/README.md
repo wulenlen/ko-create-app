@@ -33,6 +33,8 @@ $ yarn add ko-script --dev
 
 7. ko swagger 生成swagger接口文件(可选js/ts),用户自定义请放在restful.js
 
+9. ko install 安装已发布npm包组件或者区块
+
 8. ko [xx] -h 查看相关命令参数使用
 ```
 

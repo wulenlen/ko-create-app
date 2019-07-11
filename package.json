@@ -12,8 +12,8 @@
     "e2e": "tasks/e2e-simple.sh",
     "publish": "lerna publish",
     "start": "lerna bootstrap",
-    "update":"lerna updated",
-    "clean":"lerna clean"
+    "update": "lerna updated",
+    "clean": "lerna clean"
   },
   "devDependencies": {
     "lerna": "^2.11.0",
