@@ -16,103 +16,115 @@
 15 silly getUpdates
 16 info Checking for updated packages...
 17 silly hasTags
-18 verbose hasTags false
-19 info Comparing with initial commit.
-20 verbose updated ko-babel-app
-21 verbose updated ko-script
-22 info Checking for prereleased packages...
-23 silly collectDependents
-24 silly isPackageDependentOf ko-babel-app ko-babel-app
-25 silly isPackageDependentOf ko-babel-app ko-script
-26 silly isPackageDependentOf ko-script ko-babel-app
-27 verbose dependent ko-script depends on ko-babel-app
-28 silly isPackageDependentOf ko-script ko-script
-29 silly isPackageDependentOf ko-babel-app ko-script
-30 silly collectUpdates
-31 verbose has filtered update ko-babel-app
-32 verbose has filtered update ko-script
-33 silly initialize success
-34 silly execute attempt
-35 silly runScriptSync preversion ko-create
-36 silly runScriptSync preversion ko-babel-app
-37 silly runScriptSync version ko-babel-app
-38 silly runScriptSync preversion ko-script
-39 silly runScriptSync version ko-script
-40 silly runScriptSync version ko-create
-41 silly addFile /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/package.json
-42 silly addFile /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/package.json
-43 silly commit Publish
-43 silly commit
-43 silly commit  - ko-babel-app@7.4.12
-43 silly commit  - ko-script@3.3.2
-44 verbose commit [
-44 verbose commit   'commit',
-44 verbose commit   '--no-verify',
-44 verbose commit   '-F',
-44 verbose commit   '/private/var/folders/4j/fwg2zml16hx3378__0f932500000gn/T/a4f72821-ab12-4d8a-b8e9-6c31c0b6e0a2/lerna-commit.txt'
-44 verbose commit ]
-45 silly addTag ko-babel-app@7.4.12
-46 silly addTag ko-script@3.3.2
-47 silly runScriptSync postversion ko-babel-app
-48 silly runScriptSync postversion ko-script
-49 silly runScriptSync postversion ko-create
-50 info publish Publishing packages to npm...
-51 silly existsSync /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/scripts/prepublish.js
-52 verbose execScript No prepublish script found at /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/scripts/prepublish.js
-53 silly existsSync /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/scripts/prepublish.js
-54 verbose execScript No prepublish script found at /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/scripts/prepublish.js
-55 verbose publishing ko-babel-app
-56 silly publishTaggedInDir latest ko-babel-app
-57 silly getExecOpts {
-57 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
-57 silly getExecOpts }
-58 error publish Retrying failed publish: ko-babel-app
-59 verbose publish error undefined
-60 verbose publishing ko-babel-app
-61 silly publishTaggedInDir latest ko-babel-app
-62 silly getExecOpts {
-62 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
-62 silly getExecOpts }
-63 error publish Retrying failed publish: ko-babel-app
-64 verbose publish error undefined
-65 verbose publishing ko-babel-app
-66 silly publishTaggedInDir latest ko-babel-app
-67 silly getExecOpts {
-67 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
-67 silly getExecOpts }
-68 error publish Retrying failed publish: ko-babel-app
-69 verbose publish error undefined
-70 verbose publishing ko-babel-app
-71 silly publishTaggedInDir latest ko-babel-app
-72 silly getExecOpts {
-72 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
-72 silly getExecOpts }
-73 error publish Retrying failed publish: ko-babel-app
-74 verbose publish error undefined
-75 verbose publishing ko-babel-app
-76 silly publishTaggedInDir latest ko-babel-app
-77 silly getExecOpts {
-77 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
-77 silly getExecOpts }
-78 error publish Ran out of retries while publishing ko-babel-app Error: Command failed: yarn publish --tag latest --new-version 7.4.12
-78 error publish error Couldn't publish package: "https://registry.npm.taobao.org/ko-babel-app: [unauthorized] Login first"
-78 error publish yarn publish v1.9.4
-78 error publish [1/4] Bumping version...
-78 error publish info Current version: 7.4.12
-78 error publish [2/4] Logging in...
-78 error publish [3/4] Publishing...
-78 error publish info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
-78 error publish
-78 error publish     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/lerna/node_modules/execa/index.js:236:11
-78 error publish     at processTicksAndRejections (internal/process/task_queues.js:82:5)
-79 error execute callback with error
-80 error Error: Command failed: yarn publish --tag latest --new-version 7.4.12
-80 error error Couldn't publish package: "https://registry.npm.taobao.org/ko-babel-app: [unauthorized] Login first"
-80 error yarn publish v1.9.4
-80 error [1/4] Bumping version...
-80 error info Current version: 7.4.12
-80 error [2/4] Logging in...
-80 error [3/4] Publishing...
-80 error info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
-80 error
-80 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/lerna/node_modules/execa/index.js:236:11
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag ko-babel-app@7.5.0
+21 info Comparing with ko-babel-app@7.5.0.
+22 silly diffSinceIn ko-babel-app@7.5.0 packages/ko-babel-app
+23 silly diff packages/ko-babel-app/README.md
+24 silly diffSinceIn ko-babel-app@7.5.0 packages/ko-script
+25 silly diff packages/ko-script/README.md
+25 silly diff packages/ko-script/bin/ko-install.js
+25 silly diff packages/ko-script/bin/ko.js
+25 silly diff packages/ko-script/package-lock.json
+25 silly diff packages/ko-script/package.json
+25 silly diff packages/ko-script/script/install.js
+25 silly diff packages/ko-script/util/fileService.js
+26 verbose updated ko-babel-app
+27 verbose updated ko-script
+28 info Checking for prereleased packages...
+29 silly collectDependents
+30 silly isPackageDependentOf ko-babel-app ko-babel-app
+31 silly isPackageDependentOf ko-babel-app ko-script
+32 silly isPackageDependentOf ko-script ko-babel-app
+33 verbose dependent ko-script depends on ko-babel-app
+34 silly isPackageDependentOf ko-script ko-script
+35 silly isPackageDependentOf ko-babel-app ko-script
+36 silly collectUpdates
+37 verbose has filtered update ko-babel-app
+38 verbose has filtered update ko-script
+39 silly initialize success
+40 silly execute attempt
+41 silly runScriptSync preversion ko-create
+42 silly runScriptSync preversion ko-babel-app
+43 silly runScriptSync version ko-babel-app
+44 silly runScriptSync preversion ko-script
+45 silly runScriptSync version ko-script
+46 silly runScriptSync version ko-create
+47 silly addFile /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/package.json
+48 silly addFile /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/package.json
+49 silly commit Publish
+49 silly commit
+49 silly commit  - ko-babel-app@7.5.1-0
+49 silly commit  - ko-script@3.7.0
+50 verbose commit [
+50 verbose commit   'commit',
+50 verbose commit   '--no-verify',
+50 verbose commit   '-F',
+50 verbose commit   '/private/var/folders/4j/fwg2zml16hx3378__0f932500000gn/T/0847944d-b5e2-4440-97b3-5d2a819ff046/lerna-commit.txt'
+50 verbose commit ]
+51 silly addTag ko-babel-app@7.5.1-0
+52 silly addTag ko-script@3.7.0
+53 silly runScriptSync postversion ko-babel-app
+54 silly runScriptSync postversion ko-script
+55 silly runScriptSync postversion ko-create
+56 info publish Publishing packages to npm...
+57 silly existsSync /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/scripts/prepublish.js
+58 verbose execScript No prepublish script found at /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app/scripts/prepublish.js
+59 silly existsSync /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/scripts/prepublish.js
+60 verbose execScript No prepublish script found at /Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-script/scripts/prepublish.js
+61 verbose publishing ko-babel-app
+62 silly publishTaggedInDir latest ko-babel-app
+63 silly getExecOpts {
+63 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
+63 silly getExecOpts }
+64 error publish Retrying failed publish: ko-babel-app
+65 verbose publish error undefined
+66 verbose publishing ko-babel-app
+67 silly publishTaggedInDir latest ko-babel-app
+68 silly getExecOpts {
+68 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
+68 silly getExecOpts }
+69 error publish Retrying failed publish: ko-babel-app
+70 verbose publish error undefined
+71 verbose publishing ko-babel-app
+72 silly publishTaggedInDir latest ko-babel-app
+73 silly getExecOpts {
+73 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
+73 silly getExecOpts }
+74 error publish Retrying failed publish: ko-babel-app
+75 verbose publish error undefined
+76 verbose publishing ko-babel-app
+77 silly publishTaggedInDir latest ko-babel-app
+78 silly getExecOpts {
+78 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
+78 silly getExecOpts }
+79 error publish Retrying failed publish: ko-babel-app
+80 verbose publish error undefined
+81 verbose publishing ko-babel-app
+82 silly publishTaggedInDir latest ko-babel-app
+83 silly getExecOpts {
+83 silly getExecOpts   cwd: '/Users/charlesyang/space/workspace/team/ko-create-app/packages/ko-babel-app'
+83 silly getExecOpts }
+84 error publish Ran out of retries while publishing ko-babel-app Error: Command failed: yarn publish --tag latest --new-version 7.5.1-0
+84 error publish error Couldn't publish package: "https://registry.npm.taobao.org/ko-babel-app: [unauthorized] Login first"
+84 error publish yarn publish v1.9.4
+84 error publish [1/4] Bumping version...
+84 error publish info Current version: 7.5.1-0
+84 error publish [2/4] Logging in...
+84 error publish [3/4] Publishing...
+84 error publish info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
+84 error publish
+84 error publish     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/lerna/node_modules/execa/index.js:236:11
+84 error publish     at processTicksAndRejections (internal/process/task_queues.js:82:5)
+85 error execute callback with error
+86 error Error: Command failed: yarn publish --tag latest --new-version 7.5.1-0
+86 error error Couldn't publish package: "https://registry.npm.taobao.org/ko-babel-app: [unauthorized] Login first"
+86 error yarn publish v1.9.4
+86 error [1/4] Bumping version...
+86 error info Current version: 7.5.1-0
+86 error [2/4] Logging in...
+86 error [3/4] Publishing...
+86 error info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
+86 error
+86 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/lerna/node_modules/execa/index.js:236:11
