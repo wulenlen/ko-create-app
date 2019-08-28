@@ -7,8 +7,6 @@
     "packages/*"
   ],
   "scripts": {
-    "changelog": "lerna-changelog",
-    "create-react-app": "node tasks/cra.js",
     "e2e": "tasks/e2e-simple.sh",
     "publish": "lerna publish",
     "start": "lerna bootstrap",
