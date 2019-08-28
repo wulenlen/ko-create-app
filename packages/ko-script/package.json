@@ -18,6 +18,8 @@
     "scss",
     "antd",
     "swagger",
+    "createPage",
+    "createComp",
     "happypack",
     "webpackdll",
     "webpack",
