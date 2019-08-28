@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-24 15:51:59
  * @LastEditors: Charles
- * @LastEditTime: 2019-08-28 10:11:38
+ * @LastEditTime: 2019-08-28 11:14:02
  */
 const { differenceWith } = require('lodash');
 const webpackMerge = require('webpack-merge');
@@ -107,8 +107,7 @@ const tsRule=[
       hints: false, // 关闭性能提示
     },
     plugins: program.ts? getPlugins(result.entry).concat(tsPlugin):getPlugins(result.entry),
-    optimization: {
-    },
+    optimization: {},
     node: {
       dgram: 'empty',
       fs: 'empty',
