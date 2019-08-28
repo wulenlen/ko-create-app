@@ -1,6 +1,6 @@
 {
   "name": "ko-script",
-  "version": "3.8.1-alpha.0",
+  "version": "3.8.2",
   "description": "this is cli",
   "main": "index.js",
   "scripts": {
