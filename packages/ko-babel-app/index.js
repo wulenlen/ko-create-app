@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-11 14:57:12
  * @LastEditors: Charles
- * @LastEditTime: 2019-07-05 15:39:39
+ * @LastEditTime: 2019-11-26 15:44:15
  */
 
 
@@ -31,6 +31,8 @@ module.exports ={
                     // bundle size. We shouldn't rely on magic to try and shrink it.
                     // Do not transform modules to CJS
                     modules: false,
+
+                    "useBuiltIns":"usage",
                     // Exclude transforms that make all code slower
                     exclude: ['transform-typeof-symbol'],
                 },
