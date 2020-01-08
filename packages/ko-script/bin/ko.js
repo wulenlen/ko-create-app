@@ -10,6 +10,7 @@ program
   .version(pkg.version,'-v, --version')
   .usage('<command> [options]')
   .command('init', 'init scaffold')
+  .command('create', 'create webcomponent')
   .command('build', 'build project')
   .command('dev', 'start server')
   .command('dll', 'build dll')

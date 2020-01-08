@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-11 14:57:12
- * @LastEditors: Charles
- * @LastEditTime: 2019-07-05 15:37:45
+ * @LastEditors  : Charles
+ * @LastEditTime : 2020-01-08 16:21:10
  */
 
 
@@ -37,11 +37,9 @@ module.exports = () => {
                 '@babel/preset-env',
                 {
                     ignoreBrowserslistConfig: true,
-                    // If users import all core-js they're probably not concerned with
-                    // bundle size. We shouldn't rely on magic to try and shrink it.
-                    useBuiltIns: false,
-                    // Do not transform modules to CJS
                     modules: false,
+
+                    "useBuiltIns":"entry",
                     // Exclude transforms that make all code slower
                     exclude: ['transform-typeof-symbol'],
                 },
@@ -98,15 +96,15 @@ module.exports = () => {
             }],
             '@babel/plugin-proposal-json-strings',
             [
-             "@babel/plugin-transform-runtime",
-                {
-                    "absoluteRuntime":absoluteRuntime,
-                    "corejs": false,
-                    "helpers": true,
-                    "regenerator": true,
-                    "useESModules": false
-                }
-            ],
+                "@babel/plugin-transform-runtime",
+                   {
+                       "absoluteRuntime":absoluteRuntime,
+                       "corejs": false,
+                       "helpers": true,
+                       "regenerator": true,
+                       "useESModules": false
+                   }
+               ],
             ["babel-plugin-import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
             ["babel-plugin-import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"]
             ["babel-plugin-import", { "libraryName": "ant-design-vue", "libraryDirectory": "lib"}, "ant-design-vue"]

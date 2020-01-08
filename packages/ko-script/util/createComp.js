@@ -11,7 +11,7 @@ const fs = require('fs');
 const Mustache = require('mustache');
 const Path = require('path');
 
-const { existsSync, mkdir } = require('../util/fileService');
+const { existsSync, mkdir } = require('./fileService');
 
 function toLine(str) { // 大驼峰转连字符 loginIn -> login-in
 	var temp = str.replace(/[A-Z]/g, function (match) {	
