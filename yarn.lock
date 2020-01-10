@@ -10520,7 +10520,7 @@ webpack-dev-middleware@^3.7.2:
 
 webpack-dev-server@^3.8.0:
   version "3.10.1"
-  resolved "https://registry.npm.taobao.org/webpack-dev-server/download/webpack-dev-server-3.10.1.tgz?cache=0&sync_timestamp=1576754515247&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-dev-server%2Fdownload%2Fwebpack-dev-server-3.10.1.tgz#1ff3e5cccf8e0897aa3f5909c654e623f69b1c0e"
+  resolved "https://registry.npm.taobao.org/webpack-dev-server/download/webpack-dev-server-3.10.1.tgz#1ff3e5cccf8e0897aa3f5909c654e623f69b1c0e"
   integrity sha1-H/PlzM+OCJeqP1kJxlTmI/abHA4=
   dependencies:
     ansi-html "0.0.7"
@@ -10609,7 +10609,7 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1:
 
 webpack@^4.39.3:
   version "4.41.5"
-  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.41.5.tgz#3210f1886bce5310e62bb97204d18c263341b77c"
+  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.41.5.tgz?cache=0&sync_timestamp=1577481983622&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-4.41.5.tgz#3210f1886bce5310e62bb97204d18c263341b77c"
   integrity sha1-MhDxiGvOUxDmK7lyBNGMJjNBt3w=
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
