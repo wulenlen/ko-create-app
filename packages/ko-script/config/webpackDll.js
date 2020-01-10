@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-17 19:53:52
  * @LastEditors  : Charles
- * @LastEditTime : 2020-01-10 15:03:44
+ * @LastEditTime : 2020-01-10 16:27:44
  */
 const path = require('path');
 //const getBabelConf = require('./getBabelConf');
@@ -39,8 +39,8 @@ module.exports=function(s){
  const userConfig = getUserConf();
  const {dll=[]}=userConfig;
  let splicModules=dll.length?dll:dependencies;
- //const babelConf=require.resolve('ko-babel-app');
- const babelConf = getBabelConf();
+ const babelConf=require.resolve('ko-babel-app');
+ //const babelConf = getBabelConf();
 
  return {
         mode:"production", //process.env.NODE_ENV === 'production' ? 'production' : 'development',

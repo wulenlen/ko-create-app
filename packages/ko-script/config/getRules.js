@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-24 15:51:59
- * @LastEditors: Charles
- * @LastEditTime: 2019-03-01 12:00:08
+ * @LastEditors  : Charles
+ * @LastEditTime : 2020-01-10 16:23:56
  */
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -74,7 +74,7 @@ module.exports = () => {
                     loader: SASS_LOADER,
                     options: {
                         sourceMap: true,
-                        javascriptEnabled: true
+                        //javascriptEnabled: true
                     },
                 },
             ],

@@ -16,8 +16,8 @@ const {createHappyPlugin}=require("../util/createHappyPlugin")
 
 
 module.exports = () => {
-    const babelConf = getBabelConf();
-    //const babelConf=require('ko-babel-app');
+    //const babelConf = getBabelConf();
+    const babelConf=require('ko-babel-app');
     // const miniCssExtractPluginLoader = {
     //     loader: MiniCssExtractPlugin.loader
     // };
