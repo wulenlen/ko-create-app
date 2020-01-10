@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-11 14:57:12
  * @LastEditors  : Charles
- * @LastEditTime : 2020-01-08 15:14:33
+ * @LastEditTime : 2020-01-10 14:59:19
  */
 
 
@@ -28,7 +28,7 @@ module.exports ={
                 {
                     "modules": false, // 推荐
                     "useBuiltIns": "entry", // 推荐
-                    corejs: 3,
+                    corejs: 2,
                     exclude: ['transform-typeof-symbol'],
                 }
             ],
@@ -41,6 +41,7 @@ module.exports ={
             // Stage 1
             '@babel/plugin-proposal-export-default-from',
             '@babel/plugin-proposal-logical-assignment-operators',
+            '@babel/plugin-transform-regenerator',
             ['@babel/plugin-proposal-optional-chaining', {
                 loose: false
             }],
