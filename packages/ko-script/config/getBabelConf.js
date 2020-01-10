@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-11 14:57:12
  * @LastEditors  : Charles
- * @LastEditTime : 2020-01-08 16:21:10
+ * @LastEditTime : 2020-01-10 15:52:00
  */
 
 
@@ -36,13 +36,11 @@ module.exports = () => {
             [
                 '@babel/preset-env',
                 {
-                    ignoreBrowserslistConfig: true,
-                    modules: false,
-
-                    "useBuiltIns":"entry",
-                    // Exclude transforms that make all code slower
+                    "modules": false, // 推荐
+                    // "useBuiltIns": "entry", // 推荐
+                    // corejs: 3,
                     exclude: ['transform-typeof-symbol'],
-                },
+                }
             ],
             ['@babel/preset-react'],
             ['@babel/preset-typescript']
@@ -53,6 +51,7 @@ module.exports = () => {
             // Stage 1
             '@babel/plugin-proposal-export-default-from',
             '@babel/plugin-proposal-logical-assignment-operators',
+            '@babel/plugin-transform-regenerator',
             ['@babel/plugin-proposal-optional-chaining', {
                 loose: false
             }],
@@ -94,21 +93,20 @@ module.exports = () => {
             ['@babel/plugin-proposal-class-properties', {
                 loose: true
             }],
-            '@babel/plugin-proposal-json-strings',
             [
                 "@babel/plugin-transform-runtime",
-                   {
-                       "absoluteRuntime":absoluteRuntime,
-                       "corejs": false,
-                       "helpers": true,
-                       "regenerator": true,
-                       "useESModules": false
-                   }
-               ],
+                {
+                    "absoluteRuntime": false,
+                    "corejs": false,
+                    "helpers": true,
+                    "regenerator": true,
+                    "useESModules": false
+                }
+              ],
+            '@babel/plugin-proposal-json-strings',
             ["babel-plugin-import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
             ["babel-plugin-import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"]
             ["babel-plugin-import", { "libraryName": "ant-design-vue", "libraryDirectory": "lib"}, "ant-design-vue"]
-        
-        ]),
+        ])
     };
 };

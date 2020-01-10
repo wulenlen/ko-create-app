@@ -5,7 +5,7 @@
  * @Author: Charles
  * @Date: 2018-12-17 19:53:52
  * @LastEditors  : Charles
- * @LastEditTime : 2020-01-08 16:47:06
+ * @LastEditTime : 2020-01-10 15:03:44
  */
 const path = require('path');
 //const getBabelConf = require('./getBabelConf');
@@ -21,6 +21,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const BABEL_LOADER = require.resolve('babel-loader');
 const deepAssign = require('deep-assign');
 const getUserConf = require('./getUserConf');
+const getBabelConf = require('./getBabelConf');
 let cleanPath = ['dll']
 let cleanOpt = {
     root:paths.appDirectory,
@@ -38,7 +39,8 @@ module.exports=function(s){
  const userConfig = getUserConf();
  const {dll=[]}=userConfig;
  let splicModules=dll.length?dll:dependencies;
- const babelConf=require.resolve('ko-babel-app');
+ //const babelConf=require.resolve('ko-babel-app');
+ const babelConf = getBabelConf();
 
  return {
         mode:"production", //process.env.NODE_ENV === 'production' ? 'production' : 'development',

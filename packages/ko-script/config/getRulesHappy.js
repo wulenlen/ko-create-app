@@ -8,7 +8,7 @@ const SASS_LOADER = require.resolve('sass-loader');
 const FILE_LOADER = require.resolve('file-loader');
 const VUE_LOADER = require.resolve('vue-loader');
 const deepAssign = require('deep-assign');
-//const getBabelConf = require('./getBabelConf');
+const getBabelConf = require('./getBabelConf');
 const BABEL_LOADER = require.resolve('babel-loader');
 const {createHappyPlugin}=require("../util/createHappyPlugin")
 
@@ -16,8 +16,8 @@ const {createHappyPlugin}=require("../util/createHappyPlugin")
 
 
 module.exports = () => {
-    //const babelConfig = getBabelConf();
-    const babelConf=require('ko-babel-app');
+    const babelConf = getBabelConf();
+    //const babelConf=require('ko-babel-app');
     // const miniCssExtractPluginLoader = {
     //     loader: MiniCssExtractPlugin.loader
     // };
