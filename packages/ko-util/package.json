@@ -1,6 +1,6 @@
 {
   "name": "@ko/ko-util",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,7 +13,6 @@
     "tool",
     "util"
   ],
-  "devDependencies": {},
   "author": "charles",
   "license": "ISC",
   "dependencies": {
