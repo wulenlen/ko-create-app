@@ -1,4 +1,4 @@
-## ko-script v3.5.0
+## ko-script
 
 [![npm version](https://img.shields.io/npm/v/ts-loader.svg)](https://www.npmjs.com/package/ko-script)
 [![Linux Build Status](https://travis-ci.org/TypeStrong/ts-loader.svg?branch=master)](https://npmjs.org/package/ko-script)
@@ -35,7 +35,9 @@ $ yarn add ko-script --dev
 
 9. ko install 安装已发布npm包组件或者区块
 
-8. ko [xx] -h 查看相关命令参数使用
+10.ko create  创建页面或者组件目录及文件
+
+11. ko [xx] -h 查看相关命令参数使用
 ```
 
 ### Use advanced

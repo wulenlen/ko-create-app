@@ -1,4 +1,4 @@
-## ko-babel-app v7.4.4
+## ko-babel-app 
 
 [![npm version](https://img.shields.io/npm/v/ts-loader.svg)](https://www.npmjs.com/package/ko-babel-app)
 [![Downloads](http://img.shields.io/npm/dm/ts-loader.svg)](https://npmjs.org/package/ko-babel-app)
@@ -14,7 +14,7 @@ $ npm install ko-babel-app --dev.
 $ yarn add  ko-babel-app --dev.
 ```
 
-## demo 
+## usege
 ```text
 1. const babelConf=require('ko-babel-app');
 2.{
@@ -28,6 +28,7 @@ $ yarn add  ko-babel-app --dev.
 ```
 
 ## Tips
+
 > 1.可配合 ko-script 使用;
 
 > 2.可单独配置webpack中使用，省去安装各种babel;
