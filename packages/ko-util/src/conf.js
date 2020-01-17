@@ -1,11 +1,11 @@
 const conf = {
   reduceConfig(config) { 
-      if (!_.isArray(config)) {
+       if(!_.isArray(config)) {
           return config;
         }
         let output = {};
         for (let i = 0, len = config.length; i < len; i++) {
-          output[config[i]._name] = reduceConfig(config[i]._value);
+          output[config[i]._name] = this.reduceConfig(config[i]._value);
         }
         return output;
   } ,
