@@ -1,5 +1,7 @@
-import * as localDb from './localDb.js';
+import localDb from './localDb.js';
+import conf from './conf'
 
 export default {
-    localDb
+    localDb,
+    conf
 } 
