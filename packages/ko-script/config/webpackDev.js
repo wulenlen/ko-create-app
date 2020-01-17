@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-20 14:17:11
- * @LastEditors: Charles
- * @LastEditTime: 2019-02-20 14:31:32
+ * @LastEditors  : Charles
+ * @LastEditTime : 2020-01-15 16:51:42
  */
 
 const webpackMerge = require('webpack-merge');
@@ -15,7 +15,7 @@ const getWebpackBase = require('./webpackBase');
 
 module.exports = function getWebpackDev(program) {
   const plugins = [
-    new webpack.NamedModulesPlugin(),
+    // new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ];
