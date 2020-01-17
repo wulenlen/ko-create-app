@@ -48,4 +48,4 @@ const localDb = {
     },
 }
 
-export default localDb
+export default localDb;
