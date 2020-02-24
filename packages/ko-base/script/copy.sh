@@ -1,1 +1,1 @@
-scp -r ./src  ./es
+scp -r ./src/  ./es
