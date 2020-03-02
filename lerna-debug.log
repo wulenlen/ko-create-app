@@ -1,7 +1,6 @@
-36 error Error: Command failed: git commit -F /private/var/folders/4j/fwg2zml16hx3378__0f932500000gn/T/04b62e56-a04d-4af0-99eb-8b4f85b0117f/lerna-commit.txt
-36 error On branch master
-36 error Your branch is up-to-date with 'origin/master'.
-36 error nothing to commit, working tree clean
-36 error
-36 error     at makeError (/Users/charlesyang/space/workspace/team/ko-create-app/node_modules/execa/index.js:174:9)
-36 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/execa/index.js:278:16
+74 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
+75 error Error: Command failed: git tag ko-util@1.2.6 -m ko-util@1.2.6
+75 error fatal: tag 'ko-util@1.2.6' already exists
+75 error
+75 error     at makeError (/Users/charlesyang/space/workspace/team/ko-create-app/node_modules/execa/index.js:174:9)
+75 error     at /Users/charlesyang/space/workspace/team/ko-create-app/node_modules/execa/index.js:278:16
