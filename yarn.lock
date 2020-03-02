@@ -3628,11 +3628,6 @@ core-js-compat@^3.6.0:
     browserslist "^4.8.3"
     semver "7.0.0"
 
-core-js@3:
-  version "3.6.2"
-  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.6.2.tgz?cache=0&sync_timestamp=1578332386331&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.6.2.tgz#2799ea1a59050f0acf50dfe89b916d6503b16caa"
-  integrity sha1-J5nqGlkFDwrPUN/om5FtZQOxbKo=
-
 core-js@^2.6.5:
   version "2.6.9"
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.6.9.tgz?cache=0&sync_timestamp=1560599811627&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
@@ -4369,6 +4364,13 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+echarts@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-4.6.0.tgz#b5a47a1046cec93ceeef954f9ee54751340558ec"
+  integrity sha512-xKkcr6v9UVOSF+PMuj7Ngt3bnzLwN1sSXWCvpvX+jYb3mePYsZnABq7wGkPac/m0nV653uGHXoHK8DCKCprdNg==
+  dependencies:
+    zrender "4.2.0"
 
 ee-first@1.1.1, ee-first@~1.1.1:
   version "1.1.1"
@@ -11195,3 +11197,8 @@ yazl@^2.4.2:
   resolved "https://registry.npm.taobao.org/yazl/download/yazl-2.5.1.tgz#a3d65d3dd659a5b0937850e8609f22fffa2b5c35"
   dependencies:
     buffer-crc32 "~0.2.3"
+
+zrender@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/zrender/-/zrender-4.2.0.tgz#d001302e155f28de1f9fc7fcd5c254bad28471cf"
+  integrity sha512-YJ9hxt5uFincYYU3KK31+Ce+B6PJmYYK0Q9fQ6jOUAoC/VHbe4kCKAPkxKeT7jGTxrK5wYu18R0TLGqj2zbEOA==

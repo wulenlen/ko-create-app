@@ -1,6 +1,6 @@
 {
-  "name": "ko-util",
-  "version": "1.2.5",
+  "name": "kov-util",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
