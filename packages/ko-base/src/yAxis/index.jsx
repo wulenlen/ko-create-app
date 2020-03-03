@@ -1,5 +1,5 @@
 import React from 'react';
-import { dateFormat, getYTicks, getTicksOfAxis } from '../utils/utils';
+import { dateFormat, getYTicks, getTicksOfAxis } from 'ko-util/base';
 export function YAxisLeft(props) {
   const { scale, config, translateAxis } = props;
   if (!config.show) return null;

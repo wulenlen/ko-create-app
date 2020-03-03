@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-11 14:57:12
- * @LastEditors  : Charles
- * @LastEditTime : 2020-01-10 16:26:48
+ * @LastEditors: Charles
+ * @LastEditTime: 2020-03-03 18:19:43
  */
 
 
@@ -71,6 +71,7 @@ module.exports ={
         ['@babel/plugin-proposal-decorators', {
             legacy: true
         }],
+        '@babel/plugin-transform-modules-commonjs',
         '@babel/plugin-proposal-function-sent',
         '@babel/plugin-proposal-export-namespace-from',
         '@babel/plugin-proposal-numeric-separator',

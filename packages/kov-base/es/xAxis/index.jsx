@@ -1,5 +1,5 @@
 import React from 'react';
-import { dateFormat, getTicksOfAxis } from 'ko-util/base';
+import { dateFormat, getTicksOfAxis } from 'kov-util/base';
 
 export default function XAxis(props) {
   const { scale, config, translateAxis, transformLine, emitCallback } = props;
