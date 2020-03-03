@@ -1,5 +1,5 @@
 import React from 'react';
-import { getYTicks } from 'ko-util/base';
+import { getYTicks } from 'kov-util/base';
 export default function Grid(props) {
   const { xScale, yScale, xConfig, yConfig } = props;
   if (!xConfig.show && !yConfig.show) return null;
