@@ -1,5 +1,5 @@
 import React from 'react';
-import { dateFormat, getYTicks, getTicksOfAxis } from 'kov-util/base';
+import {  base } from 'kov-util/base';
 export function YAxisLeft(props) {
   const { scale, config, translateAxis } = props;
   if (!config.show) return null;
@@ -10,10 +10,10 @@ export function YAxisLeft(props) {
   const values = scale.ticks
     ? tickAuto
       ? scale.ticks(+count)
-      : getYTicks(domain[1], domain[0], +count)
+      : base.getYTicks(domain[1], domain[0], +count)
     : tickAuto
     ? domain
-    : getTicksOfAxis(domain, +count);
+    : base.getTicksOfAxis(domain, +count);
   const height = scale.range()[0];
   const bandwidth = scale.bandwidth ? scale.bandwidth() : 0;
   const transform = translateAxis ? translateAxis : 'translate(0, 0)';
@@ -29,7 +29,7 @@ export function YAxisLeft(props) {
         {label.show && index % (blank + 1) === 0 && (
           <g transform={'translate(-10, 0)'}>
             <text fill={text.color} x={0} dy='0.3em' transform={'rotate(' + (label.angle || 0) + ')'}>
-              {label.type === 'date' ? dateFormat(entry, label.showType) : entry.toFixed(toFixed)}
+              {label.type === 'date' ? base.dateFormat(entry, label.showType) : entry.toFixed(toFixed)}
             </text>
           </g>
         )}
@@ -71,7 +71,7 @@ export function YAxisRight(props) {
   const { translate = {} } = unit;
   const { count, tickAuto = true } = label;
   const domain = scale.domain();
-  const values = scale.ticks ? (tickAuto ? scale.ticks(+count) : getYTicks(domain[1], domain[0], +count)) : domain;
+  const values = scale.ticks ? (tickAuto ? scale.ticks(+count) : base.getYTicks(domain[1], domain[0], +count)) : domain;
   const height = scale.range()[0];
   const bandwidth = scale.bandwidth ? scale.bandwidth() : 0;
   const transform = translateAxis ? translateAxis : 'translate(0, 0)';
@@ -87,7 +87,7 @@ export function YAxisRight(props) {
         {label.show && index % (blank + 1) === 0 && (
           <g transform={'translate(10, 0)'}>
             <text fill={text.color} x={0} dy='0.3em'>
-              {label.type === 'date' ? dateFormat(entry, label.showType) : entry}
+              {label.type === 'date' ? base.dateFormat(entry, label.showType) : entry}
             </text>
           </g>
         )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getYTicks } from 'ko-util/base';
+import { base } from 'kov-util/base';
 export default function Grid(props) {
   const { xScale, yScale, xConfig, yConfig } = props;
   if (!xConfig.show && !yConfig.show) return null;
@@ -9,7 +9,7 @@ export default function Grid(props) {
   const height = yScale.range()[0];
   const yDomain = yScale.domain();
   const xValues = xScale.ticks ? xScale.ticks(+xConfig.count) : xScale.domain();
-  const yValues = yScale.ticks ? tickAuto ? yScale.ticks(+yCount) : getYTicks(yDomain[1], yDomain[0], +yCount) : yDomain;
+  const yValues = yScale.ticks ? tickAuto ? yScale.ticks(+yCount) : base.getYTicks(yDomain[1], yDomain[0], +yCount) : yDomain;
   const xBandwidth = xScale.bandwidth ? xScale.bandwidth() : 0;
   const yBandwidth = yScale.bandwidth ? yScale.bandwidth() : 0;
   return (

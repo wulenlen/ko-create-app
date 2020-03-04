@@ -1,5 +1,5 @@
 import React from 'react';
-import { dateFormat, getTicksOfAxis } from 'kov-util/base';
+import { base} from 'kov-util';
 
 export default function XAxis(props) {
   const { scale, config, translateAxis, transformLine, emitCallback } = props;
@@ -7,7 +7,7 @@ export default function XAxis(props) {
   const { axisLine = {}, tickLine = {}, label = {}, text = {}, unit = {} } = config;
   const { translate: unitTranslate = {} } = unit;
   const { x: unitTranslateX = 20, y: unitTranslateY = 0 } = unitTranslate;
-  const values = scale.ticks ? scale.ticks(+label.count) : getTicksOfAxis(scale.domain(), +label.count);
+  const values = scale.ticks ? scale.ticks(+label.count) : base.getTicksOfAxis(scale.domain(), +label.count);
   const width = scale.range()[1];
   const bandwidth = scale.bandwidth ? scale.bandwidth() : 0;
 
@@ -22,7 +22,7 @@ export default function XAxis(props) {
     });
   };
   const ticks = values.map((entry, index) => {
-    let showText = label.type === 'date' ? dateFormat(entry, label.showType) : entry;
+    let showText = label.type === 'date' ? base.dateFormat(entry, label.showType) : entry;
     let showTextList = [];
     if (label.break) {
       showTextList.push(showText.slice(0, label.breakNumber));
