@@ -1,6 +1,6 @@
 {
   "name": "kov-base",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "",
   "module": "es/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "echarts": "^4.6.0",
-    "react": "^16.12.0",
-    "kov-util":"^1.3.4"
+    "kov-util": "^1.3.4",
+    "react": "^16.12.0"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.0",
