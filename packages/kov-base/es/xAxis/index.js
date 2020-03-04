@@ -1,5 +1,5 @@
 import React from 'react';
-import { base} from 'kov-util';
+import { base } from 'kov-util';
 
 export default function XAxis(props) {
   const { scale, config, translateAxis, transformLine, emitCallback } = props;

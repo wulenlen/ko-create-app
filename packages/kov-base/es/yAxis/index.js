@@ -1,5 +1,5 @@
 import React from 'react';
-import {  base } from 'kov-util/base';
+import { base } from 'kov-util';
 export function YAxisLeft(props) {
   const { scale, config, translateAxis } = props;
   if (!config.show) return null;

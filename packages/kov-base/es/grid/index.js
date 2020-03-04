@@ -1,5 +1,5 @@
 import React from 'react';
-import { base } from 'kov-util/base';
+import { base } from 'kov-util';
 export default function Grid(props) {
   const { xScale, yScale, xConfig, yConfig } = props;
   if (!xConfig.show && !yConfig.show) return null;
