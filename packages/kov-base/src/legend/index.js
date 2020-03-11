@@ -65,14 +65,14 @@ export default function Legend(props) {
 
   return (
     <div
-      className='__easyv-legend-wrapper'
+      className='kov-legend-wrapper'
       style={{
         ...wrapperStyle,
         ...conditionStyle,
         transform: `translate3d(${translateX}px,${translateY}px,0)`,
       }}
     >
-      <ul className='__easyv-legend' style={legendStyle}>
+      <ul className='kov-legend' style={legendStyle}>
         {shouldShowedSeries.map((entry, index) => {
           // 为了适用公共的MyIcon 这里只传了一个color，导致basicBar中已经支持渐变的图例没有拿到正确的color
           let color = entry.color,
@@ -85,7 +85,7 @@ export default function Legend(props) {
 
           return (
             <li
-              className={`__easyv-legend-item ${isAnime ? animeStyles[`legend-anime${reStart ? '-' : ''}`] : ''}`}
+              className={`kov-legend-item ${isAnime ? animeStyles[`legend-anime${reStart ? '-' : ''}`] : ''}`}
               style={{
                 ...itemStyle,
                 animationDelay: `${index * 2000}ms`,
@@ -148,7 +148,7 @@ export default function Legend(props) {
                   justifyContent: 'space-between',
                 }}
               >
-                {name && <span className='__easyv-legend-item-text'>{name}</span>}
+                {name && <span className='kov-legend-item-text'>{name}</span>}
                 {showValue && (
                   <span
                     style={{
@@ -168,7 +168,7 @@ export default function Legend(props) {
                           ? `${number.text.shadow.hShadow}px ${number.text.shadow.vShadow}px ${number.text.shadow.blur}px ${number.text.shadow.color}`
                           : undefined,
                       }}
-                      className='__easyv-legend-item-value'
+                      className='kov-legend-item-value'
                     >
                       {value}
                     </span>

@@ -13,9 +13,9 @@ export default function Grid(props) {
   const xBandwidth = xScale.bandwidth ? xScale.bandwidth() : 0;
   const yBandwidth = yScale.bandwidth ? yScale.bandwidth() : 0;
   return (
-    <g className="__easyv-grid">
+    <g className="kov-grid">
       {
-        yConfig.show && <g className="__easyv-grid-horizontal">
+        yConfig.show && <g className="kov-grid-horizontal">
           {
             yValues.map((entry, index) => {
               let y = yScale(entry);
@@ -28,7 +28,7 @@ export default function Grid(props) {
       }
 
       {
-        xConfig.show && <g className="__easyv-grid-vertical">
+        xConfig.show && <g className="kov-grid-vertical">
           {
             xValues.map((entry, index) => {
               let x = xScale(entry);

@@ -22,7 +22,7 @@ export function YAxisLeft(props) {
   const ticks = values.map((entry, index) => {
     let y = scale(entry);
     return (
-      <g className='__easyv-tick' transform={`translate(0,${y + bandwidth / 2})`} key={index}>
+      <g className='kov-tick' transform={`translate(0,${y + bandwidth / 2})`} key={index}>
         {tickLine.show && (
           <line stroke={tickLine.color} strokeWidth={tickLine.width} y1={0.5} y2={0.5} x1={-6.5} x2={-0.5} />
         )}
@@ -38,7 +38,7 @@ export function YAxisLeft(props) {
   });
   return (
     <g
-      className='__easyv-yaxis-left'
+      className='kov-yaxis-left'
       textAnchor='end'
       fontFamily={text.fontFamily}
       fontSize={text.fontSize}
@@ -53,7 +53,7 @@ export function YAxisLeft(props) {
       {/* 单位 */}
       {unit.show && (
         <g
-          className='__easyv-unit'
+          className='kov-unit'
           transform={'translate(' + (translate.x || '-10') + ', ' + (translate.y || '0') + ')'}
         >
           <text dy='-1em' fill={text.color} fontSize={text.fontSize} textAnchor='end'>
@@ -80,7 +80,7 @@ export function YAxisRight(props) {
   const ticks = values.map((entry, index) => {
     let y = scale(entry);
     return (
-      <g className='__easyv-tick' transform={`translate(0,${y + bandwidth / 2})`} key={index}>
+      <g className='kov-tick' transform={`translate(0,${y + bandwidth / 2})`} key={index}>
         {tickLine.show && (
           <line stroke={tickLine.color} y1={0.5} strokeWidth={tickLine.width} y2={0.5} x1={0} x2={6.5} />
         )}
@@ -96,7 +96,7 @@ export function YAxisRight(props) {
   });
   return (
     <g
-      className='__easyv-yaxis-right'
+      className='kov-yaxis-right'
       textAnchor='start'
       fontFamily={text.fontFamily}
       fontSize={text.fontSize}
@@ -111,7 +111,7 @@ export function YAxisRight(props) {
       {/* 单位 */}
       {unit.show && (
         <g
-          className='__easyv-unit'
+          className='kov-unit'
           transform={'translate(' + (translate.x || '10') + ', ' + (translate.y || '0') + ')'}
         >
           <text dy='-1em' fill={text.color} fontSize={text.fontSize} textAnchor='start'>

@@ -39,7 +39,7 @@ export default function XAxis(props) {
 
     let x = scale(entry);
     return (
-      <g className='__easyv-tick' transform={`translate(${x + bandwidth / 2}, ${label.translateY || 0})`} key={index}>
+      <g className='kov-tick' transform={`translate(${x + bandwidth / 2}, ${label.translateY || 0})`} key={index}>
         {tickLine.show && <line strokeWidth={tickLine.width} stroke={tickLine.color} y2='6' x1={0.5} x2={0.5} />}
         {label.show && (
           <g transform={`translate(0, ${textTranslateY})`}>
@@ -88,7 +88,7 @@ export default function XAxis(props) {
       {/* 单位 */}
       {unit.show && (
         <g
-          className='__easyv-x-unit'
+          className='kov-x-unit'
           transform={`translate(${width + unitTranslateX}, ${textTranslateY + unitTranslateY})`}
         >
           <text dy='0.8em' fill={text.color} fontSize={text.fontSize} textAnchor='start'>
