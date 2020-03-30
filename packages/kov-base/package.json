@@ -1,6 +1,6 @@
 {
   "name": "kov-base",
-  "version": "1.3.8",
+  "version": "1.3.9",
   "description": "",
   "module": "dist/main.js",
   "scripts": {
@@ -57,5 +57,5 @@
     "webpack-cli": "^3.3.11"
 >>>>>>> update
   },
-  "gitHead": "9f44bc0a6cd81de80798dad108999ff2b1448083" 
+  "gitHead": "9f44bc0a6cd81de80798dad108999ff2b1448083"
 }
