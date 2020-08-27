@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-24 15:51:59
- * @LastEditors: Charles
- * @LastEditTime: 2020-03-03 18:36:17
+ * @LastEditors  : Charles
+ * @LastEditTime : 2020-01-08 16:46:39
  */
 const { differenceWith } = require('lodash');
 const webpackMerge = require('webpack-merge');
@@ -49,6 +49,9 @@ const pluginsUnique = (uniques) => {
  * @Author: Charles
  * @Date: 2018-12-26 11:24:53
  */
+const ENV_PROD = "production";
+const ENV_DEV = "development";
+
 module.exports = function getWebpackBase(program) {
   const result=getEntry(program);
 const tsRule=[
@@ -76,7 +79,7 @@ const tsRule=[
   
 
   const webpackConfig = {
-    mode: process.env.NODE_ENV,
+    mode: process.env.NODE_ENV === ENV_DEV ? ENV_DEV : ENV_PROD,
     context: paths.appDirectory,
     entry:result.entry,
     output: Object.assign(
