@@ -17,7 +17,7 @@ npm install @dtux/ko-request
 |reqIntercept| request拦截器 |(config) => config  |false|
 |resIntercept| response拦截器  |(res) => Promise  |false|
 
-```
+```javascript
 import { Axios } from '@dtux/ko-request';
 const http = new Fetch({
 	initConfig: {
@@ -38,7 +38,7 @@ const http = new Fetch({
 });
 ```
 ### Fetch  Usage
-|参数名| 描述| 类型|是否必须| 
+|参数名| 描述| 类型|是否必须|
 | :--| :----------: | :-----: | ---------: |
 | baseURL    | 接口地址  |String |false|
 |initConfig| 初始化配置 | Object |false|
