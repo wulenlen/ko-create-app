@@ -4,16 +4,17 @@ class Fetch {
 	constructor(props) {
 		this.baseURL = props.baseURL || '';		
 		this.initConfig = props.initConfig || {};
-		this.reqIntercept = props.reqIntercept || (config, url) => config;
-		this.resIntercept = props.resIntercept || (res, url) => Promise.resolve(res)
+		this.reqIntercept = props.reqIntercept || function(config, url){ return config};
+		this.resIntercept = props.resIntercept ||  function(res, url){ return Promise.resolve(res)}
 	}
 
 	request(url, options) {
 		// 合并初始化config
 		const config = Object.assign(options, this.initConfig)
+		
 
-		return fetch(this.baseURL + url, this.reqIntercept(config,url ))
-			.then(res => this.resIntercept(res, url))
+		return fetch(this.baseURL + url, this.reqIntercept(config,url))
+			.then(res => this.resIntercept(res, url) )
 			.then(res => {
 				return res.json()
 			})

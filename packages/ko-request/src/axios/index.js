@@ -3,15 +3,15 @@ import axios from 'axios';
 class Axios {
 	constructor(props) {
 		this.initConfig = props.initConfig || {};
-		this.beforeRequset = props.beforeRequset || () => null;
-		this.reqIntercept = props.reqIntercept || (config) => config;
-		this.resIntercept = props.resIntercept	||() => null;
+		this.beforeRequset = props.beforeRequset || function(){}
+		this.reqIntercept = props.reqIntercept || function(config){return config}
+		this.resIntercept = props.resIntercept || function(){}
 	}
 
 	//设置拦截器
 	setInterceptors(instance, url) {
 		// 这里的url可供你针对需要特殊处理的接口路径设置不同拦截器。
-		this.beforeRequset(url)
+		this.beforeRequset && this.beforeRequset(url)
 		instance.interceptors.request.use((config) => { // 请求拦截器
 			return this.reqIntercept(config);
 		}, err => Promise.reject(err));
@@ -19,7 +19,7 @@ class Axios {
 		instance.interceptors.response.use((response) => { // 响应拦截器
 			// 在这里移除loading
 			// todo: 想根据业务需要，对响应结果预先处理的，都放在这里
-			this.resIntercept(response)
+			this.resIntercept(response) 
 			switch (response.status) {
 				case 200:
 					return response.data;
