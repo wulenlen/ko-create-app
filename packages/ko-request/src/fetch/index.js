@@ -2,10 +2,10 @@ import  'whatwg-fetch'
 
 class Fetch {
 	constructor(props) {
-		this.baseURL = props.baseURL;		
-		this.initConfig = props.initConfig;
-		this.reqIntercept = props.reqIntercept
-		this.resIntercept = props.resIntercept
+		this.baseURL = props.baseURL || '';		
+		this.initConfig = props.initConfig || {};
+		this.reqIntercept = props.reqIntercept || (config, url) => config;
+		this.resIntercept = props.resIntercept || (res, url) => Promise.resolve(res)
 	}
 
 	request(url, options) {

@@ -2,11 +2,10 @@ import axios from 'axios';
 
 class Axios {
 	constructor(props) {
-		this.initConfig = props.initConfig;
-		this.baseURL = props.baseURL;
-		this.beforeRequset = props.beforeRequset
-		this.reqIntercept = props.reqIntercept
-		this.resIntercept = props.resIntercept	
+		this.initConfig = props.initConfig || {};
+		this.beforeRequset = props.beforeRequset || () => null;
+		this.reqIntercept = props.reqIntercept || (config) => config;
+		this.resIntercept = props.resIntercept	||() => null;
 	}
 
 	//设置拦截器
