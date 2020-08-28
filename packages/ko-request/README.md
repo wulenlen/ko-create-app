@@ -39,7 +39,7 @@ const http = new Fetch({
 ```
 ### Fetch  Usage
 |参数名| 描述| 类型|是否必须| 
-| :--| :----------: | : -----: | ---------: |
+| :--| :----------: | :-----: | ---------: |
 | baseURL    | 接口地址  |String |false|
 |initConfig| 初始化配置 | Object |false|
 |reqIntercept| request拦截器 |(config, url) => config  |false|
