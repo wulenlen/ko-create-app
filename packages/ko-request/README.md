@@ -11,8 +11,8 @@ npm install @dtux/ko-request
 ```
 ### Axios  Usage
 | 参数名 | 描述 | 类型|是否必须 |
-| :--| :----------------: | : -----: | -----------: |
-| beforeRequset    | 发起请求前的回调  |url => null |false|
+| :--| :----------------: | : -----: | -----------: |  
+| beforeRequset    | 发起请求前的回调  |url => null |false|  
 |initConfig| 初始化配置 | Object |false|
 |reqIntercept| request拦截器 |(config) => config  |false|
 |resIntercept| response拦截器  |(res) => Promise  |false|
