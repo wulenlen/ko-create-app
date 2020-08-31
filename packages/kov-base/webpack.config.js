@@ -7,3 +7,44 @@
  * @LastEditors: Charles
  * @LastEditTime: 2020-03-03 18:11:12
  */
+
+const path = require('path');
+
+module.exports = {
+  mode: 'production',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    libraryExport: "default",
+    libraryTarget: "umd"
+  },
+  module: {
+    rules: [
+      {
+        test: /js$|jsx$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react'],
+              "plugins": [
+                [
+                  "@babel/plugin-proposal-decorators",
+                  {
+                      "legacy": true
+                  }
+                ],
+                "@babel/plugin-proposal-class-properties",
+              ]
+            }
+          }
+        ]
+      },
+      {
+        test: /css$/,
+        use: ['css-loader']
+      }
+    ]
+  }
+}
