@@ -106,5 +106,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-simple-progress-plugin": "^0.0.4"
   },
-  "gitHead": "088ddba43fe3f95cd65a234f8d6c8ad2c82a29af"
+  "gitHead": "d62ea084df03facd6e6060a57811fce64f9b3100"
 }
