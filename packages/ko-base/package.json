@@ -1,5 +1,5 @@
 {
-  "name": "ko-base",
+  "name": "@dtux/ko-base",
   "version": "1.2.2-alpha.0",
   "description": "",
   "module": "es/index.js",

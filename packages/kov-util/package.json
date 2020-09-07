@@ -1,5 +1,5 @@
 {
-  "name": "kov-util",
+  "name": "@dtux/kov-util",
   "version": "1.3.5",
   "description": "",
   "main": "lib/kov-util.js",

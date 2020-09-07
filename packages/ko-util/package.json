@@ -1,5 +1,5 @@
 {
-  "name": "ko-util",
+  "name": "@dtux/ko-util",
   "version": "1.2.7",
   "description": "",
   "main": "lib/index.js",

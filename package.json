@@ -1,5 +1,5 @@
 {
-  "name": "ko-create",
+  "name": "@dtux/ko-create",
   "version": "1.0.0",
   "description": "dtux-app",
   "workspaces": [
