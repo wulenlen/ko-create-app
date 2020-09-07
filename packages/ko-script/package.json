@@ -1,6 +1,6 @@
 {
   "name": "@dtux/ko-script",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "this is cli",
   "main": "index.js",
   "scripts": {
