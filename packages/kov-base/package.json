@@ -1,5 +1,5 @@
 {
-  "name": "kov-base",
+  "name": "@dtux/kov-base",
   "version": "1.3.11",
   "description": "",
   "module": "dist/main.js",
@@ -14,8 +14,12 @@
     "tool",
     "util"
   ],
-  "author": "charles",
+  "author": "dtux",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
+  },
   "dependencies": {
     "css-loader": "^3.4.2",
     "echarts": "^4.6.0",
@@ -23,7 +27,6 @@
     "react": "^16.13.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
@@ -42,20 +45,6 @@
     "rollup-plugin-terser": "^5.1.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-=======
-    "@babel/runtime": "^7.8.7",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
-    "ko-babel-app": "^7.7.2",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "terser-webpack-plugin": "^2.3.5",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
->>>>>>> update
   },
   "gitHead": "9f44bc0a6cd81de80798dad108999ff2b1448083"
 }

@@ -13,8 +13,12 @@
     "tool",
     "util"
   ],
-  "author": "charles",
+  "author": "dtux",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
+  },
   "dependencies": {
     "d3-array": "^2.4.0",
     "d3-color": "^1.4.0",

@@ -17,6 +17,10 @@
 	],
 	"author": "wuxian",
 	"license": "ISC",
+	"publishConfig": {
+	  "access": "public",
+	  "registry": "http://registry.npmjs.com"
+	},
 	"dependencies": {
 		"@babel/core": "^7.11.1",
 		"@rollup/plugin-buble": "^0.21.0",

@@ -1,10 +1,15 @@
 {
-  "name": "ko-babel-app",
+  "name": "@dtux/ko-babel-app",
   "version": "7.7.2",
   "description": "this is babel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
   },
   "bin": {
     "ko-babel-app": "./index.js"
@@ -25,7 +30,6 @@
   },
   "homepage": "https://github.com/dtux-kangaroo/ko-script/issues/1",
   "author": "dtux",
-  "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "7.7.4",

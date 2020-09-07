@@ -1,5 +1,5 @@
 {
-  "name": "ko-map",
+  "name": "@dtux/ko-map",
   "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
@@ -13,8 +13,12 @@
     "tool",
     "util"
   ],
-  "author": "charles",
+  "author": "dtux",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
+  },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.0",
     "@rollup/plugin-commonjs": "^11.0.1",
