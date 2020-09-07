@@ -37,5 +37,5 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"whatwg-fetch": "^3.4.0"
 	},
-	"gitHead": "d62ea084df03facd6e6060a57811fce64f9b3100"
+	"gitHead": "e5765361a99e4c37c85f814111c60bbd96c58a25"
 }
