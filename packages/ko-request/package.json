@@ -1,6 +1,6 @@
 {
 	"name": "@dtux/ko-request",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "基于axios和fetch封装的request工具，添加有拦截器，方便快速配置使用",
 	"main": "lib/ko-request.js",
 	"module": "es/index.js",
@@ -18,8 +18,8 @@
 	"author": "wuxian",
 	"license": "ISC",
 	"publishConfig": {
-	  "access": "public",
-	  "registry": "http://registry.npmjs.com"
+		"access": "public",
+		"registry": "http://registry.npmjs.com"
 	},
 	"dependencies": {
 		"@babel/core": "^7.11.1",
