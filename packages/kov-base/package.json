@@ -1,18 +1,7 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "name": "@dtux/kov-base",
+  "name": "@kodesign/kov-base",
   "version": "1.4.5",
-  "description": "",
-  "module": "lib/index.min.js",
-=======
- "name": "@kodesign/ko-util",
-=======
- "name": "@kodesign/kov-base",
->>>>>>> 命名-update
-  "version": "1.4.2",
   "description": "袋鼠基础图表",
->>>>>>> 命名空间-update
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -21,7 +10,7 @@
   },
   "homepage": "",
   "author": "kodesign",
-  "main": "lib/index.js",
+  "main": "lib/index.min.js",
   "module": "es/index.js",
   "license": "ISC",
   "publishConfig": {
