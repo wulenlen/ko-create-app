@@ -1,6 +1,6 @@
 {
   "name": "@dtux/kov-base",
-  "version": "1.4.2",
+  "version": "1.4.4",
   "description": "",
   "module": "lib/index.min.js",
   "scripts": {
