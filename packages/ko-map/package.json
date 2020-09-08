@@ -1,7 +1,7 @@
 {
-  "name": "@dtux/ko-map",
+ "name": "@kodesign/ko-map",
   "version": "1.2.2",
-  "description": "",
+  "description": "基于高德地图图表",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
@@ -13,11 +13,16 @@
     "tool",
     "util"
   ],
-  "author": "dtux",
+  "author": "kodesign",
   "license": "ISC",
   "publishConfig": {
     "access": "public",
     "registry": "http://registry.npmjs.com"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.0",

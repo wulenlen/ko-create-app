@@ -1,35 +1,28 @@
 {
-  "name": "@dtux/ko-babel-app",
+  "name": "@kodesign/ko-babel-app",
   "version": "7.10.1",
-  "description": "this is babel",
+  "description": "babel编译包",
   "main": "index.js",
+  "module": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
+  "keywords": [
+    "ko",
+    "base",
+    "util"
+  ],
+  "author": "kodesign",
   "license": "ISC",
   "publishConfig": {
     "access": "public",
     "registry": "http://registry.npmjs.com"
   },
-  "bin": {
-    "ko-babel-app": "./index.js"
-  },
-  "keywords": [
-    "ko",
-    "react",
-    "vue",
-    "typescript",
-    "babel"
-  ],
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dtux-kangaroo/ko-script.git"
+    "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
   },
-  "bugs": {
-    "url": "https://github.com/dtux-kangaroo/ko-script/issues"
-  },
-  "homepage": "https://github.com/dtux-kangaroo/ko-script/issues/1",
-  "author": "dtux",
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "7.7.4",
