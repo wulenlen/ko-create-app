@@ -1,6 +1,6 @@
 {
   "name": "@kodesign/kov-base",
-  "version": "1.4.5",
+  "version": "1.5.0",
   "description": "袋鼠基础图表",
   "scripts": {
     "build": "rollup -c",

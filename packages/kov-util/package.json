@@ -1,6 +1,6 @@
 {
   "name": "@kodesign/kov-util",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "袋鼠基础图表-工具库",
   "scripts": {
     "build": "rollup -c",
@@ -24,7 +24,6 @@
     "type": "git",
     "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
   },
-  
   "dependencies": {
     "d3-array": "^2.4.0",
     "d3-color": "^1.4.0",

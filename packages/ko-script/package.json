@@ -1,24 +1,24 @@
 {
-	"name": "@kodesign/ko-script",
+  "name": "@kodesign/ko-script",
   "author": "kodesign",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "description": "基于webpack打包cli工具",
-	"main": "index.js",
-	"module": "",
-	"scripts": {
-	  "build": "rollup -c",
-	  "dev": "rollup -c -w"
-	},
-	"license": "ISC",
-	"publishConfig": {
-	  "access": "public",
-	  "registry": "http://registry.npmjs.com"
-	},
-	"homepage": "",
-	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
-	},
+  "main": "index.js",
+  "module": "",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
+  },
   "bin": {
     "ko": "./bin/ko.js"
   },
