@@ -1,7 +1,7 @@
 {
   "name": "@kodesign/ko-script",
   "author": "kodesign",
-  "version": "4.25.1",
+  "version": "4.25.2",
   "description": "基于webpack打包cli工具",
   "main": "index.js",
   "module": "",
@@ -108,5 +108,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-simple-progress-plugin": "^0.0.4"
   },
-  "gitHead": "e5765361a99e4c37c85f814111c60bbd96c58a25"
+  "gitHead": "a7adbb1c7ce588bf5220bb513bfd64c5bc7801ca"
 }
