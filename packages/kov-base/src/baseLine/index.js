@@ -1,6 +1,6 @@
 import React from "react";
 
-export function BaseLineHorizontal(props) {
+function BaseLineHorizontal(props) {
   const { width, config = {}, scale, max } = props;
   const { baseValue, baseType, show, baseLine = {}, text = {} } = config;
   const { color, lineType } = baseLine;
@@ -34,7 +34,7 @@ export function BaseLineHorizontal(props) {
   );
 }
 
-export function BaseLineVertical(props) {
+function BaseLineVertical(props) {
   const { height, config = {}, scale, max } = props;
   const { baseValue, baseType, show, baseLine = {}, text = {} } = config;
   if (!show) return null;
@@ -63,4 +63,9 @@ export function BaseLineVertical(props) {
       )}
     </g>
   );
+}
+
+export default {
+  BaseLineHorizontal,
+  BaseLineVertical
 }

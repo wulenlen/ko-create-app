@@ -1,56 +1,4 @@
-<<<<<<< HEAD
-/*
- * @Description: 文件
- * @version: 1.0.0
- * @Company: 袋鼠云
- * @Author: Charles
- * @Date: 2020-03-03 18:11:12
- * @LastEditors: Charles
- * @LastEditTime: 2020-03-03 18:11:12
- */
-
-const path = require('path');
-
-module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    libraryExport: "default",
-    libraryTarget: "umd"
-  },
-  module: {
-    rules: [
-      {
-        test: /js$|jsx$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              "plugins": [
-                [
-                  "@babel/plugin-proposal-decorators",
-                  {
-                      "legacy": true
-                  }
-                ],
-                "@babel/plugin-proposal-class-properties",
-              ]
-            }
-          }
-        ]
-      },
-      {
-        test: /css$/,
-        use: ['css-loader']
-      }
-    ]
-  }
-}
-=======
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+// const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -70,7 +18,7 @@ module.exports = {
 	output: {
 		//文件输出配置
 		path: path.resolve(__dirname, 'lib'), // 所有输出文件的目标路径
-		filename: 'kov-base.min.js',
+		filename: 'index.min.js',
 		library: 'kov-base', //  导出库(exported library)的名称
 		libraryTarget: 'umd', // 通用模块定义    // 导出库
 	},
@@ -83,8 +31,8 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: Object.assign({}, babelConf, {
-                        cacheDirectory: true
-                      }),
+						cacheDirectory: true
+					}),
 				},
 			},
 			{
@@ -103,8 +51,8 @@ module.exports = {
 			filename: 'css/[name].[hash].css',
 			chunkFilename: 'css/[id].[hash].css',
 		}),
-        new webpack.NamedModulesPlugin(), //product 默认为此项
-        new CleanWebpackPlugin(),
+		new webpack.NamedModulesPlugin(), //product 默认为此项
+		new CleanWebpackPlugin(),
 	],
 	performance: {
 		//打包性能配置
@@ -166,4 +114,3 @@ module.exports = {
 		//防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖
 	},
 };
->>>>>>> update
