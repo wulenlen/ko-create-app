@@ -11,7 +11,6 @@
     "registry": "http://registry.npmjs.com"
   },
   "scripts": {
-    "e2e": "tasks/e2e-simple.sh",
     "publish": "lerna publish",
     "start": "lerna bootstrap",
     "update": "lerna updated",
