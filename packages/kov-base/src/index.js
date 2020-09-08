@@ -6,7 +6,7 @@ import Legend from './legend';
 import echart from './echart';
 export default {
     yAxis,
-    echart,
+    echart,  
     baseLine,
     Grid,
     XAxis,
