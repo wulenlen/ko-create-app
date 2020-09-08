@@ -12,7 +12,7 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public",
-    "registry": "http://registry.npmjs.com"
+    "registry": "http://registry.npmjs.org"
   },
   "homepage": "",
   "repository": {
@@ -108,5 +108,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-simple-progress-plugin": "^0.0.4"
   },
-  "gitHead": "a7adbb1c7ce588bf5220bb513bfd64c5bc7801ca"
+  "gitHead": "241d345f002da2bf7f8865d4a6db6b5d9416f3b9"
 }

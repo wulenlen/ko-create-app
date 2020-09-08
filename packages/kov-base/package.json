@@ -15,7 +15,7 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public",
-    "registry": "http://registry.npmjs.com"
+    "registry": "http://registry.npmjs.org"
   },
   "keywords": [
     "ko",
