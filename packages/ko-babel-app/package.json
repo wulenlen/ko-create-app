@@ -1,6 +1,6 @@
 {
   "name": "@kodesign/ko-babel-app",
-  "version": "7.10.2",
+  "version": "7.10.3",
   "description": "babel编译包",
   "main": "index.js",
   "module": "",
