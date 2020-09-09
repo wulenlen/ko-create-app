@@ -1,6 +1,6 @@
 import React from 'react';
 import { base } from 'kov-util';
-export default function YAxisLeft(props) {
+function YAxisLeft(props) {
   const { scale, config, translateAxis } = props;
   if (!config.show) return null;
   const { axisLine = {}, tickLine = {}, label = {}, text = {}, unit = {} } = config;
@@ -64,7 +64,7 @@ export default function YAxisLeft(props) {
     </g>
   );
 }
-export function YAxisRight(props) {
+function YAxisRight(props) {
   const { scale, config, translateAxis } = props;
   if (!config.show) return null;
   const { axisLine = {}, tickLine = {}, label = {}, text = {}, unit = {} } = config;
@@ -121,4 +121,9 @@ export function YAxisRight(props) {
       )}
     </g>
   );
+}
+
+export default {
+  YAxisLeft,
+  YAxisRight,
 }

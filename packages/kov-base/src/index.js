@@ -1,14 +1,14 @@
 import XAxis from './xAxis';
-import yAxis from './yAxis';
+import YAxis from './yAxis';
 import Grid from './grid';
-import baseLine from './baseLine'
+import BaseLine from './baseLine'
 import Legend from './legend';
 import echart from './echart';
 export default {
-    yAxis,
+    YAxis,
     echart,  
-    baseLine,
+    BaseLine,
     Grid,
     XAxis,
     Legend
-} 
+}

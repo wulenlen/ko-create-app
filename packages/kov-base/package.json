@@ -2,12 +2,12 @@
   "name": "@dtux/kov-base",
   "version": "1.4.5",
   "description": "",
-  "module": "lib/index.min.js",
+  "module": "es/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "copy": " ./script/copy.sh",
-    "build-w": "webpack --bail --progress --profile  --config ./webpack.config"
+    "build-w": "webpack --config ./webpack.config"
   },
   "keywords": [
     "kov",
@@ -51,5 +51,5 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
-  "gitHead": "f62eae9a136ccbcee2f31542c0ba08caf4efaa00"
+  "gitHead": "ec0a6cbe439928ba6872460e0f9b8117ee736fed"
 }
