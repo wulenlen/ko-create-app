@@ -39,5 +39,5 @@
     "rollup-plugin-cpy": "^2.0.1",
     "rollup-plugin-terser": "^5.1.3"
   },
-  "gitHead": "dffe6279eca5c09ac8cb1504ee49cf22ddc69652"
+  "gitHead": "b62d264650b9bb52d3c3316cfb69c45ed71d34a6"
 }

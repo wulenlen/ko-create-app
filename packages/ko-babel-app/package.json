@@ -50,5 +50,5 @@
     "@babel/runtime": "^7.7.7",
     "babel-plugin-import": "^1.13.0"
   },
-  "gitHead": "e5765361a99e4c37c85f814111c60bbd96c58a25"
+  "gitHead": "b62d264650b9bb52d3c3316cfb69c45ed71d34a6"
 }
