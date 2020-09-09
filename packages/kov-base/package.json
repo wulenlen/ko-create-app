@@ -57,9 +57,5 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
-<<<<<<< HEAD
-  "gitHead": "ec0a6cbe439928ba6872460e0f9b8117ee736fed"
-=======
   "gitHead": "b62d264650b9bb52d3c3316cfb69c45ed71d34a6"
->>>>>>> 841f004cfa20c97ba3897bbd0a33e0e942963e99
 }
