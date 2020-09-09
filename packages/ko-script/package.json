@@ -1,10 +1,23 @@
 {
-  "name": "@dtux/ko-script",
-  "version": "4.1.2",
-  "description": "this is cli",
+  "name": "@kodesign/ko-script",
+  "author": "kodesign",
+  "version": "4.25.5",
+  "description": "基于webpack打包cli工具",
   "main": "index.js",
+  "module": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
   },
   "bin": {
     "ko": "./bin/ko.js"
@@ -30,19 +43,8 @@
     "preview",
     "script"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dtux-kangaroo/ko-script.git"
-  },
   "bugs": {
     "url": "https://github.com/dtux-kangaroo/ko-script/issues"
-  },
-  "homepage": "https://github.com/dtux-kangaroo/ko-script/issues/1",
-  "author": "dtux",
-  "license": "ISC",
-  "publishConfig": {
-    "access": "public",
-    "registry": "http://registry.npmjs.com"
   },
   "dependencies": {
     "assets-webpack-plugin": "^3.9.10",
@@ -106,5 +108,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-simple-progress-plugin": "^0.0.4"
   },
-  "gitHead": "e5765361a99e4c37c85f814111c60bbd96c58a25"
+  "gitHead": "b62d264650b9bb52d3c3316cfb69c45ed71d34a6"
 }

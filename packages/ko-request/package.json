@@ -1,8 +1,9 @@
 {
-	"name": "@dtux/ko-request",
-	"version": "1.1.2",
+	"name": "@kodesign/ko-request",
+	"author": "kodesign",
+	"version": "1.3.2",
 	"description": "基于axios和fetch封装的request工具，添加有拦截器，方便快速配置使用",
-	"main": "lib/ko-request.js",
+	"main": "lib/index.js",
 	"module": "es/index.js",
 	"scripts": {
 		"build": "rollup -c",
@@ -15,11 +16,15 @@
 		"axios",
 		"fetch"
 	],
-	"author": "wuxian",
 	"license": "ISC",
 	"publishConfig": {
 		"access": "public",
-		"registry": "http://registry.npmjs.com"
+		"registry": "http://registry.npmjs.org"
+	},
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dtux-kangaroo/ko-resouce/tree/master/react-resource/blocks/about"
 	},
 	"dependencies": {
 		"@babel/core": "^7.11.1",
@@ -37,5 +42,5 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"whatwg-fetch": "^3.4.0"
 	},
-	"gitHead": "e5765361a99e4c37c85f814111c60bbd96c58a25"
+	"gitHead": "b62d264650b9bb52d3c3316cfb69c45ed71d34a6"
 }

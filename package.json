@@ -1,5 +1,5 @@
 {
-  "name": "@dtux/ko-create",
+  "name": "@kodesign/ko-create",
   "version": "1.0.0",
   "description": "dtux-app",
   "workspaces": [
@@ -11,14 +11,13 @@
     "registry": "http://registry.npmjs.com"
   },
   "scripts": {
-    "e2e": "tasks/e2e-simple.sh",
     "publish": "lerna publish",
     "start": "lerna bootstrap",
     "update": "lerna updated",
     "clean": "lerna clean"
   },
   "devDependencies": {
-    "lerna": "^3.20.2",
+    "lerna": "^3.22.1",
     "lerna-changelog": "^0.7.0"
   }
 }
