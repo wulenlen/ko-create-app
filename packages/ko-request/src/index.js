@@ -1,4 +1,4 @@
-import Axios from './axios'
-import Fetch from './fetch'
+import Axios, { axios} from './axios'
+import Fetch, { fetch } from './fetch'
 
-export { Axios, Fetch }
+export { Axios, axios, Fetch, fetch }

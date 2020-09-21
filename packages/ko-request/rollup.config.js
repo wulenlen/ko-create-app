@@ -24,6 +24,7 @@ export default {
 			exclude: 'node_modules/**'
 		}),
 	],
-	external: ['lodash'] // 指出应将哪些模块视为外部模块
+	 // 指出应将哪些模块视为外部模块
+	external: ['whatwg-fetch', 'axios']
 
 }

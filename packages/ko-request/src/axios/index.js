@@ -1,4 +1,4 @@
-import axios from 'axios';
+import _axios from 'axios';
 
 class Axios {
 	constructor(props) {
@@ -63,7 +63,7 @@ class Axios {
 
 	request(url, options) {
 		// 每次请求都会创建新的axios实例。
-		const instance = axios.create();
+		const instance = _axios.create();
 		const config = { // 将用户传过来的参数与公共配置合并。
 			url,
 			...options,
@@ -157,6 +157,18 @@ class Axios {
 	}
 
 
+}
+
+export const axios = (url, body = {}, method = 'GET') => {
+	let options = {
+		method,
+		headers: {
+			"content-type": "application/json;charset=UTF-8"
+		},
+		data: JSON.stringify(body)
+	}
+	const instance = _axios.create();
+	return instance({url, ...options}); 
 }
 
 export default  Axios;
