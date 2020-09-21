@@ -6,8 +6,8 @@
 > 基于axios和fetch封装的request工具，方便设置拦截器，配合swagger可以方便快速配置使用
 ### Install
 ```
-yarn add @dtux/ko-requset
-npm install @dtux/ko-request
+yarn add @kodesign/ko-requset
+npm install @kodesign/ko-request
 ```
 ### Axios  Usage
 | 参数名 | 描述 | 类型 |是否必须
