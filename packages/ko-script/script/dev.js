@@ -27,7 +27,6 @@ module.exports = async function(program) {
   if ('devServer' in webpackDev) {
     webpackSer = deepmerge(webpackSer, webpackDev.devServer);
   }
-  // console.log(webpackSer,'webpackSer--ppppp')
   webpackSer.proxy=proxy.length?proxy:{};
   const devServer = new WebpackDevServer(compiler, webpackSer);
 

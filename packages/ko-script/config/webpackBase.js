@@ -85,7 +85,7 @@ const tsRule=[
     output: Object.assign(
       {
         path: paths.appDist,
-        filename:process.env.HASH ? 'js/[name].[hash:6].js' : 'js/[name].js',
+        filename: 'js/[name].[hash:6].js',
         publicPath:'/'
       }
     ),
