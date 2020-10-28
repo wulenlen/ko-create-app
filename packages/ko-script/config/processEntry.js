@@ -62,6 +62,5 @@ module.exports = (entry) => {
   if (process.env.NODE_ENV !== 'production') {
     entries = enhanceEntries(entries, hotDevClientPath);
   }  
-  //.log(process.env.NODE_ENV,'23131--midd',entries);
   return entries;
 };

@@ -8,6 +8,10 @@
  * @LastEditTime: 2020-03-03 18:19:43
  */
 const resolvePlugin = require('./util/index').resolvePlugin;
+const path = require('path');
+const absoluteRuntime = path.dirname(
+  require.resolve('@babel/runtime/package.json')
+);
 
 /**
  * @description 支持自定义plugins和targets
@@ -95,11 +99,17 @@ module.exports = function (plugins = [], targets) {
     [
       '@babel/plugin-transform-runtime',
       {
-        absoluteRuntime: false,
         corejs: false,
         helpers: true,
         regenerator: true,
         useESModules: false,
+        // By default, babel assumes babel/runtime version 7.0.0-beta.0,
+        // explicitly resolving to match the provided helper functions.
+        // https://github.com/babel/babel/issues/10261
+        version: require('@babel/runtime/package.json').version,
+        //Using absolute paths is not desirable if files are compiled for use at a later time, 
+        //but in contexts where a file is compiled and then immediately consumed, they can be quite helpful.
+        absoluteRuntime: absoluteRuntime,
       },
     ],
     '@babel/plugin-proposal-json-strings',

@@ -81,7 +81,6 @@ const tsRule=[
   const webpackConfig = {
     mode: process.env.NODE_ENV === ENV_DEV ? ENV_DEV : ENV_PROD,
     context: paths.appDirectory,
-    entry:result.entry,
     output: Object.assign(
       {
         path: paths.appDist,
