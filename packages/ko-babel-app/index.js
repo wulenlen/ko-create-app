@@ -7,17 +7,15 @@
  * @LastEditors: Charles
  * @LastEditTime: 2020-03-03 18:19:43
  */
-
-/**
- * @description: 获取插件绝对路径
- * @param1: param
- * @return: ret
- * @Author: Charles
- * @Date: 2018-12-26 11:13:44
- */
 const resolvePlugin = require('./util/index').resolvePlugin;
 
-module.exports = function (plugins = []) {
+/**
+ * @description 支持自定义plugins和targets
+ * @LastEditors xbrave
+ * @param plugins
+ * @param targets
+ */
+module.exports = function (plugins = [], targets) {
   const basePlugins = [
     // Stage 0
     '@babel/plugin-proposal-function-bind',
@@ -36,24 +34,28 @@ module.exports = function (plugins = []) {
       {
         useBuiltIns: true,
       },
-    ][
-      ('@babel/plugin-transform-destructuring',
-      {
-        loose: false,
-        selectiveLoose: [
-          'useState',
-          'useEffect',
-          'useContext',
-          'useReducer',
-          'useCallback',
-          'useMemo',
-          'useRef',
-          'useImperativeHandle',
-          'useLayoutEffect',
-          'useDebugValue',
-        ],
-      })
     ],
+    // Disabled as it's handled automatically by preset-env, and `selectiveLoose` isn't
+    // yet merged into babel: https://github.com/babel/babel/pull/9486
+    // Related: https://github.com/facebook/create-react-app/pull/8215
+    // [
+    //   '@babel/plugin-transform-destructuring',
+    //   {
+    //     loose: false,
+    //     selectiveLoose: [
+    //       'useState',
+    //       'useEffect',
+    //       'useContext',
+    //       'useReducer',
+    //       'useCallback',
+    //       'useMemo',
+    //       'useRef',
+    //       'useImperativeHandle',
+    //       'useLayoutEffect',
+    //       'useDebugValue',
+    //     ],
+    //   },
+    // ],
     [
       '@babel/plugin-proposal-pipeline-operator',
       {
@@ -88,6 +90,8 @@ module.exports = function (plugins = []) {
         loose: true,
       },
     ],
+    // Polyfills the runtime needed for async/await, generators, and friends
+    // https://babeljs.io/docs/en/babel-plugin-transform-runtime
     [
       '@babel/plugin-transform-runtime',
       {
@@ -108,23 +112,26 @@ module.exports = function (plugins = []) {
       'babel-plugin-import',
       { libraryName: 'ant-mobile', libraryDirectory: 'lib' },
       'ant-mobile',
-    ][
-      ('babel-plugin-import',
+    ],
+    [
+      'babel-plugin-import',
       { libraryName: 'ant-design-vue', libraryDirectory: 'lib' },
-      'ant-design-vue')
+      'ant-design-vue',
     ],
   ];
   return {
     babelrc: false,
     presets: resolvePlugin([
       [
-        /**
-         * TODO: customize @babel/preset-env config,especially targets options
-         * official docs: We don't recommend using preset-env this way because it doesn't take advantage of its ability to target specific environments/versions.
-         */
         '@babel/preset-env',
         {
-          modules: false, // 推荐
+          /**
+           * @tutorial https://github.com/browserslist/browserslist
+           */
+          targets: targets ? targets : 'defaults',
+          useBuiltIns: 'entry',
+          corejs: 3,
+          // Exclude transforms that make all code slower
           exclude: ['transform-typeof-symbol'],
         },
       ],

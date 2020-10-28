@@ -1,14 +1,19 @@
 {
   "name": "@kodesign/ko-babel-app",
   "version": "7.10.6",
-  "description": "babel编译包",
+  "description": "ko babel presets",
   "main": "index.js",
   "module": "",
   "scripts": {},
   "keywords": [
     "ko",
     "base",
-    "util"
+    "util",
+    "babel",
+    "babel-loader",
+    "babel-config",
+    "plugins",
+    "babel-presets"
   ],
   "author": "kodesign",
   "license": "ISC",
