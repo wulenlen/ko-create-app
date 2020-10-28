@@ -1,12 +1,12 @@
 /*!
- * ko-trace.js v1.0.0
+ * ko-trace.js v1.0.1
  * (c) 2018-2020 dtstack
  * Released under the MIT License.
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.Kotrace = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Kotrace = factory());
 }(this, (function () { 'use strict';
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -359,19 +359,19 @@
 
   //事件信息采集器
   var eventInfoAnalyze = function eventInfoAnalyze(event) {
-    if (!event.preventDefault) return {};
+      if (!event.preventDefault) return {};
 
-    var element = event.target || event.srcElement;
-    return {
-      '$element_id': element.id,
-      '$element_name': element.name,
-      '$element_content': element.innerHTML,
-      '$element_class_name': element.className,
-      '$element_type': element.nodeName,
-      '$element_target_url': element.href,
-      '$screenX': event.screenX,
-      '$screenY': event.screenY
-    };
+      var element = event.target || event.srcElement;
+      return {
+          '$element_id': element.id,
+          '$element_name': element.name,
+          '$element_content': element.innerHTML,
+          '$element_class_name': element.className,
+          '$element_type': element.nodeName,
+          '$element_target_url': element.href,
+          '$screenX': event.screenX,
+          '$screenY': event.screenY
+      };
   };
 
   var _extends$3 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
