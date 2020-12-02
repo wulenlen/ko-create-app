@@ -1,5 +1,5 @@
 {
-  "name": "@kodesign/kov-util",
+  "name": "ko-wiget-util",
   "version": "1.6.6",
   "description": "袋鼠基础图表-工具库",
   "scripts": {

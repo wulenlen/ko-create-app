@@ -1,5 +1,5 @@
 {
-  "name": "@kodesign/ko-util",
+  "name": "ko-util",
   "version": "1.11.4",
   "description": "袋鼠工具库",
   "scripts": {

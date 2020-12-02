@@ -1,5 +1,5 @@
 {
-  "name": "@kodesign/ko-base",
+  "name": "ko-base",
   "version": "1.2.14",
   "description": "通用图表基础",
   "main": "lib/index.js",
