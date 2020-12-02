@@ -1,6 +1,6 @@
 {
   "name": "ko-util",
-  "version": "1.11.4",
+  "version": "1.11.5",
   "description": "袋鼠工具库",
   "scripts": {
     "build": "rollup -c",
