@@ -1,17 +1,16 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-require('whatwg-fetch');
+import 'whatwg-fetch';
 
 class Fetch {
-    constructor(props) {
+    constructor(props = {}) {
         this.initConfig = props.initConfig || {};
         this.reqIntercept = props.reqIntercept || function (config) {
             return config;
         };
-        this.resIntercept = props.resIntercept || function (res) {
-            return Promise.resolve(res);
+        this.resIntercept = props.resIntercept || function (res, config) {
+            if (config.responseType === 'arraybuffer') {
+                return res.blob();
+            }
+            return res.json();
         };
         this.resErrorCallback = props.resErrorCallback || function () { };
     }
@@ -19,18 +18,12 @@ class Fetch {
         // 合并初始化config
         const config = Object.assign(this.initConfig, options);
         return fetch((options.baseURL || '') + url, this.reqIntercept(config))
-            .then(res => this.resIntercept(res))
-            .then(res => {
-            if (options.responseType) {
-                return res;
-            }
-            return res.json();
-        })
+            .then(res => this.resIntercept(res, config))
             .catch(err => {
             this.resErrorCallback(err);
         });
     }
-    get(url, params, config) {
+    get(url, params, config = {}) {
         let options = {
             method: 'GET',
             ...config
@@ -38,7 +31,7 @@ class Fetch {
         let newUrl = params ? this.queryString(url, params) : url;
         return this.request(newUrl, options);
     }
-    post(url, data, config) {
+    post(url, data = {}, config = {}) {
         let options = {
             method: 'POST',
             headers: {
@@ -47,11 +40,10 @@ class Fetch {
             body: {},
             ...config
         };
-        if (data)
-            options.body = JSON.stringify(data);
+        options.body = JSON.stringify(data);
         return this.request(url, options);
     }
-    delete(url, params, conifg) {
+    delete(url, params, conifg = {}) {
         let options = {
             method: 'DELETE',
             ...conifg
@@ -59,17 +51,16 @@ class Fetch {
         let newUrl = params ? this.queryString(url, params) : url;
         return this.request(newUrl, options);
     }
-    put(url, data, config) {
+    put(url, data = {}, config = {}) {
         let options = {
             method: 'PUT',
             body: {},
             ...config
         };
-        if (data)
-            options.body = JSON.stringify(data);
+        options.body = JSON.stringify(data);
         return this.request(url, options);
     }
-    postForm(url, data, flag = true, config) {
+    postForm(url, data, flag = true, config = {}) {
         let options = {
             method: 'POST',
             body: {},
@@ -106,4 +97,4 @@ class Fetch {
     }
 }
 
-exports.Fetch = Fetch;
+export { Fetch };

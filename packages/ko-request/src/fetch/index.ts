@@ -8,23 +8,26 @@ interface FetchConfig extends RequestInit {
 interface IProps {
 	initConfig?: Partial<FetchConfig>;
 	reqIntercept?: (config: FetchConfig) => FetchConfig;
-	resIntercept?: (response: Response) => Promise<Response>;
-	resErrorCallback?: (err?) => void
+	resIntercept?: (response: Response) => Promise<any>;
+	resErrorCallback?: (err) => void
 }
 
 export class Fetch {
 	initConfig: Partial<FetchConfig>;
 	reqIntercept: (config: FetchConfig) => FetchConfig;
-	resIntercept: (response: Response) => Promise<Response>;
-	resErrorCallback: (err?) => void;
+	resIntercept: (response: Response, config?: FetchConfig) => Promise<any>;
+	resErrorCallback: (err) => void;
 
-	constructor(props: IProps) {
+	constructor(props: IProps = {}) {
 		this.initConfig = props.initConfig || {};
 		this.reqIntercept = props.reqIntercept || function(config: FetchConfig) {
 			return config
 		};
-		this.resIntercept = props.resIntercept || function(res) {
-			return Promise.resolve(res)
+		this.resIntercept = props.resIntercept || function(res, config) {
+			if(config.responseType === 'arraybuffer') {
+				return res.blob()
+			}
+			return res.json()
 		}
 		this.resErrorCallback = props.resErrorCallback || function () {}
 	}
@@ -34,13 +37,7 @@ export class Fetch {
 		const config = Object.assign(this.initConfig, options)
 
 		return fetch((options.baseURL || '') + url, this.reqIntercept(config))
-			.then(res => this.resIntercept(res))
-			.then(res => {
-				if(options.responseType) {
-					return res
-				}
-				return res.json()
-			})
+			.then(res => this.resIntercept(res, config))
 			.catch(err => {
 				this.resErrorCallback(err);
 			});

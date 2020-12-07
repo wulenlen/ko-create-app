@@ -6,7 +6,8 @@
 	"main": "lib/index.js",
 	"module": "es/index.js",
 	"scripts": {
-		"build": "rm -fr lib && rollup -c",
+		"build": "rollup -c",
+		"build:lib": "rollup -c rollup.config.lib.js",
 		"dev": "rollup -c -w"
 	},
 	"keywords": [
